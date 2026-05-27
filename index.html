@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto fw-medium">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link active" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="SubPaginas/banho-e-tosa.html"
@@ -92,7 +92,7 @@
           <img
             src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1200&h=500&fit=crop"
             class="d-block w-100 main-carousel-img"
-            alt="Banho e Tosa"
+            alt="Cão recebendo banho no pet shop"
           />
           <div class="carousel-caption d-md-block text-start pb-5">
             <span
@@ -113,7 +113,7 @@
           <img
             src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=1200&h=500&fit=crop"
             class="d-block w-100 main-carousel-img"
-            alt="Rações e Acessórios"
+            alt="Prateleira de rações e acessórios pet"
           />
           <div class="carousel-caption d-md-block text-start pb-5">
             <span
@@ -135,7 +135,7 @@
           <img
             src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=1200&h=500&fit=crop"
             class="d-block w-100 main-carousel-img"
-            alt="Atendimento Veterinário"
+            alt="Veterinário atendendo um cachorro"
           />
           <div class="carousel-caption d-md-block text-start pb-5">
             <span
@@ -256,13 +256,143 @@
       </div>
     </section>
 
-    <footer id="contato" class="bg-dark text-white py-4 mt-5">
+    <section class="py-5 bg-warning-subtle text-dark">
+      <div class="container text-center" style="max-width: 600px">
+        <h3 class="fw-bold mb-2">Fique por dentro das novidades!</h3>
+        <p class="text-muted mb-4">
+          Receba dicas de cuidados e promoções exclusivas para o seu pet.
+        </p>
+        <form id="form-newsletter" class="row g-2 justify-content-center">
+          <div class="col-sm-8">
+            <input
+              type="email"
+              id="email-input"
+              class="form-control form-control-lg"
+              placeholder="Seu melhor e-mail"
+              required
+            />
+          </div>
+          <div class="col-sm-4">
+            <button
+              type="submit"
+              class="btn btn-warning btn-lg w-100 fw-bold border border-dark-subtle"
+            >
+              Inscrever
+            </button>
+          </div>
+        </form>
+        <div id="mensagem-sucesso" class="mt-3 fw-medium text-success"></div>
+      </div>
+    </section>
+
+    <section id="contato" class="py-5 bg-light">
+      <div class="container" style="max-width: 700px">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold">Agende uma Visita ou Táxi-Pet</h2>
+          <p class="text-muted">
+            Insira seu CEP para sabermos se atendemos a sua região!
+          </p>
+        </div>
+
+        <div class="card border-0 shadow-sm p-4 bg-white rounded">
+          <form id="form-contato">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label for="cep" class="form-label fw-semibold">CEP</label>
+                <input
+                  type="text"
+                  id="cep"
+                  class="form-control"
+                  placeholder="00000-000"
+                  maxlength="9"
+                  required
+                />
+              </div>
+              <div class="col-md-8">
+                <label for="logradouro" class="form-label fw-semibold"
+                  >Rua / Logradouro</label
+                >
+                <input
+                  type="text"
+                  id="logradouro"
+                  class="form-control"
+                  placeholder="Aguardando CEP..."
+                  readonly
+                />
+              </div>
+              <div class="col-md-5">
+                <label for="bairro" class="form-label fw-semibold"
+                  >Bairro</label
+                >
+                <input
+                  type="text"
+                  id="bairro"
+                  class="form-control"
+                  placeholder="Aguardando CEP..."
+                  readonly
+                />
+              </div>
+              <div class="col-md-5">
+                <label for="cidade" class="form-label fw-semibold"
+                  >Cidade</label
+                >
+                <input
+                  type="text"
+                  id="cidade"
+                  class="form-control"
+                  placeholder="Aguardando CEP..."
+                  readonly
+                />
+              </div>
+              <div class="col-md-2">
+                <label for="uf" class="form-label fw-semibold">UF</label>
+                <input
+                  type="text"
+                  id="uf"
+                  class="form-control"
+                  placeholder="--"
+                  readonly
+                />
+              </div>
+              <div class="col-md-4">
+                <label for="numero" class="form-label fw-semibold"
+                  >Número</label
+                >
+                <input type="text" id="numero" class="form-control" required />
+              </div>
+              <div class="col-md-8">
+                <label for="complemento" class="form-label fw-semibold"
+                  >Complemento (Opcional)</label
+                >
+                <input
+                  type="text"
+                  id="complemento"
+                  class="form-control"
+                  placeholder="Apto, Bloco, etc."
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-warning w-100 fw-bold py-2 mt-4"
+            >
+              Confirmar Endereço
+            </button>
+          </form>
+          <div id="mensagem-cep" class="mt-3 text-center fw-medium"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
       <div class="container text-center">
         <p class="mb-2 fw-bold text-warning">
           <i class="bi bi-bee-fill me-1"></i> Pet Shop Abelhinha &copy; 2026
         </p>
         <p class="small text-secondary mb-0">
-          Rua dos Pets, 123 - Centro | Telefone: (11) 99999-9999
+          Rua Luís Carlos Ventura, 54 - Jardim Colombo | Telefone: (11)
+          98352-3034
         </p>
       </div>
     </footer>
