@@ -1,6 +1,3 @@
-// ==========================================
-// PARTE 1: LocalStorage (Simulação/Exemplo)
-// ==========================================
 const meuPet = { nome: "Thor", porte: "Grande", tipo: "Cachorro" };
 localStorage.setItem("dados_do_pet", JSON.stringify(meuPet));
 
@@ -10,14 +7,10 @@ if (petSalvo) {
   console.log(`Bem-vindo de volta, dono do ${petObjeto.nome}!`);
 }
 
-// ==========================================
-// PARTE 2: Newsletter (Apenas se existir na página)
-// ==========================================
 const formNewsletter = document.getElementById("form-newsletter");
 const emailInput = document.getElementById("email-input");
 const mensagemSucesso = document.getElementById("mensagem-sucesso");
 
-// O 'if' garante que o script não quebre nas páginas que não têm a newsletter
 if (formNewsletter && emailInput && mensagemSucesso) {
   formNewsletter.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -34,9 +27,6 @@ if (formNewsletter && emailInput && mensagemSucesso) {
   });
 }
 
-// ==========================================
-// PARTE 3: API ViaCEP (Apenas se existir na página)
-// ==========================================
 const inputCep = document.getElementById("cep");
 
 if (inputCep) {
@@ -44,12 +34,10 @@ if (inputCep) {
     const cep = this.value.replace(/\D/g, "");
     const mensagemErro = document.getElementById("mensagem-cep");
 
-    // Limpa estados e mensagens anteriores
     mensagemErro.innerText = "";
     mensagemErro.className = "mt-3 text-center fw-medium";
     this.classList.remove("is-invalid", "is-valid");
 
-    // Valida se o CEP tem exatamente 8 dígitos
     if (cep.length !== 8) {
       if (cep.length > 0) {
         mensagemErro.innerText =
@@ -60,7 +48,6 @@ if (inputCep) {
       return;
     }
 
-    // Mensagem visual de carregamento nos campos de endereço
     const campos = ["logradouro", "bairro", "cidade", "uf"];
     campos.forEach((id) => {
       const campo = document.getElementById(id);
@@ -81,16 +68,11 @@ if (inputCep) {
           this.classList.add("is-invalid");
           limparCampos();
         } else {
-          // Preenche os campos com o retorno da API
           document.getElementById("logradouro").value = data.logradouro || "";
           document.getElementById("bairro").value = data.bairro || "";
           document.getElementById("cidade").value = data.localidade || "";
           document.getElementById("uf").value = data.uf || "";
-
-          // Adiciona feedback visual positivo no input
           this.classList.add("is-valid");
-
-          // Joga o foco direto no campo Número
           const campoNumero = document.getElementById("numero");
           if (campoNumero) campoNumero.focus();
         }
@@ -114,9 +96,6 @@ function limparCampos() {
   });
 }
 
-// ==========================================
-// PARTE 4: Submit do Formulário de Contato / CEP
-// ==========================================
 const formContato = document.getElementById("form-contato");
 
 if (formContato) {
@@ -126,7 +105,6 @@ if (formContato) {
     const mensagemErroOuSucesso = document.getElementById("mensagem-cep");
     const logradouroVal = document.getElementById("logradouro").value;
 
-    // Garante que a API rodou com sucesso antes de permitir o envio
     if (!logradouroVal || logradouroVal === "Carregando...") {
       mensagemErroOuSucesso.innerText =
         "Por favor, insira um CEP válido antes de confirmar.";
@@ -135,13 +113,11 @@ if (formContato) {
       return;
     }
 
-    // Sucesso na validação do DOM
     mensagemErroOuSucesso.innerText =
       "🎉 Endereço confirmado com sucesso! Entraremos em contato.";
     mensagemErroOuSucesso.className =
       "mt-3 text-center fw-bold text-success fs-5";
 
-    // Reseta o formulário após 5 segundos
     setTimeout(() => {
       formContato.reset();
       mensagemErroOuSucesso.innerText = "";
