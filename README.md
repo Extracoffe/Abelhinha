@@ -1,8 +1,11 @@
 # 📄 Documentação de Arquitetura de Software (DAS) — Pet Shop Abelhinha
 
-## 1. Visão Geral do Sistema e Objetivos Computacionais
+## 1. Informações Gerais do Projeto
 
-O sistema do **Pet Shop Abelhinha** consiste em uma aplicação web client-side voltada à divulgação de serviços e captação de leads. O sistema foi projetado sob o paradigma de desenvolvimento responsivo e adota uma arquitetura descentralizada para renderização, delegando o processamento de regras de negócio de UI e integrações assíncronas ao motor Javascript do navegador (Client-Side Rendering/Manipulation).
+- **Nome do Projeto**: Portal Institucional e Subsistema de Captura — Pet Shop Abelhinha
+- **Contexto Escolhido**: O projeto está inserido no setor de comércio e prestação de serviços para animais de estimação (Mercado Pet). Ele engloba o desenvolvimento da interface institucional e das regras de negócio em ambiente front-end para um estabelecimento que oferece serviços integrados de Estética Animal (Banho e Tosa), Hotelaria/Daycare e Atendimento Clínico Veterinário.
+- **Problema Identificado**: Estabelecimentos de saúde e estética animal enfrentam gargalos na conversão de leads e na retenção de usuários devido a processos cadastrais manuais, lentos e suscetíveis a erros de digitação (como preenchimento incorreto de endereços logísticos para serviços de leva-e-traz ou prontuários). Além disso, a falta de feedbacks em tempo real na interface (UI) gera fricção e abandono de formulários por parte dos clientes.
+- **Solução Proposta**: Desenvolvimento de uma plataforma web responsiva com arquitetura descentralizada (Client-Side Rendering). A solução mitiga os erros cadastrais ao integrar de forma assíncrona a API rest da plataforma ViaCEP, realizando a validação e o preenchimento atômico dos dados de localização do usuário com base no input do CEP. A interface também conta com manipulação dinâmica do DOM para fornecer feedbacks instantâneos de sucesso e erro sem a necessidade de recarga da página, otimizando a experiência do usuário (UX).
 
 ---
 
