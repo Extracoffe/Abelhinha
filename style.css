@@ -1,0 +1,83 @@
+/* Configurações Gerais */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fcfcfc;
+}
+
+/* Ajustes do Carrossel */
+.main-carousel-img {
+  height: 550px;
+  object-fit: cover;
+}
+
+/* Camada escura por cima da imagem para dar destaque e contraste aos textos */
+.carousel-item {
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7) 30%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+  bottom: 10%;
+  max-width: 600px;
+}
+
+/* Efeito sutil nos Cards de Serviço */
+.service-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Suavizar rolagem da página ao clicar no menu */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  /* Diminui a altura do carrossel para não sumir com a tela do celular */
+  .main-carousel-img {
+    height: 380px;
+  }
+
+  /* Ajusta o tamanho dos textos para não estourarem */
+  .carousel-caption h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem !important;
+    margin-bottom: 15px;
+  }
+
+  /* Centraliza o texto no carrossel para ficar mais harmônico no mobile */
+  .carousel-caption {
+    text-align: center !important;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  /* Dá um espaçamento extra nos cards de serviço quando eles se empilharem */
+  .service-card {
+    margin-bottom: 10px;
+  }
+}
