@@ -86,3 +86,7 @@ Devido ao isolamento das sub-views no diretório SubPaginas/, é mandatório a a
 
 🛑 Arquitetura de Script Unificado (Defensive Design contra Ponteiros Nulos)
 Como o arquivo script.js é compartilhado globalmente entre documentos com topologias estruturais distintas, a manipulação direta de referências de memória de elementos não-globais deve ser encapsulada em blocos de checagem existencial (if (targetElement)). A tentativa de vinculação de ouvintes de eventos (addEventListener) em instâncias nulas (null) causará a interrupção crítica do interpretador Javascript (Runtime Error), quebrando as demais engines da aplicação.
+
+## 6. Link do Projeto Funcional
+
+https://abelhinha-orcin.vercel.app
