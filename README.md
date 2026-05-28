@@ -28,15 +28,15 @@ pet-shop-abelhinha/
 
 ## 3. Stack Tecnológica e Dependências
 
-HTML5 Semântico: Estruturação do DOM utilizando tags de escopo (<header>, <section>, <nav>, <footer>) para otimização de acessibilidade e SEO.
+- HTML5 Semântico: Estruturação do DOM utilizando tags de escopo (<header>, <section>, <nav>, <footer>) para otimização de acessibilidade e SEO.
 
-CSS3 Vanilla: Implementação de pseudo-classes (:hover), transições de estado (transition), manipulação de opacidade via canais alfa (rgba), gradientes lineares e diretivas de compilação condicional (@media queries).
+- CSS3 Vanilla: Implementação de pseudo-classes (:hover), transições de estado (transition), manipulação de opacidade via canais alfa (rgba), gradientes lineares e diretivas de compilação condicional (@media queries).
 
-Bootstrap v5.3.3 (via CDN): Framework utilitário baseado em Flexbox e Grid System de 12 colunas, além de componentes pré-estilizados com estados de pseudo-classe nativos.
+- Bootstrap v5.3.3 (via CDN): Framework utilitário baseado em Flexbox e Grid System de 12 colunas, além de componentes pré-estilizados com estados de pseudo-classe nativos.
 
-Bootstrap Icons v1.11.3 (via CDN): Biblioteca de vetores escaláveis (SVG) encapsulados em fontes icônicas.
+- Bootstrap Icons v1.11.3 (via CDN): Biblioteca de vetores escaláveis (SVG) encapsulados em fontes icônicas.
 
-JavaScript ECMAScript 6 (ES6+): Mecanismo de execução assíncrona baseado em Promises, manipulação de API Web (Fetch), manipulação de eventos de DOM (Event Listeners) e serialização de objetos.
+- JavaScript ECMAScript 6 (ES6+): Mecanismo de execução assíncrona baseado em Promises, manipulação de API Web (Fetch), manipulação de eventos de DOM (Event Listeners) e serialização de objetos.
 
 ## 4. Engenharia de Módulos e Fluxos de Dados
 
