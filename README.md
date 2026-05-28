@@ -28,7 +28,7 @@ pet-shop-abelhinha/
 
 ## 3. Stack Tecnológica e Dependências
 
-- HTML5 Semântico: Estruturação do DOM utilizando tags de escopo (<header>, <section>, <nav>, <footer>) para otimização de acessibilidade e SEO.
+- HTML5 Semântico: Estruturação do DOM utilizando tags de escopo para otimização de acessibilidade e SEO.
 
 - CSS3 Vanilla: Implementação de pseudo-classes (:hover), transições de estado (transition), manipulação de opacidade via canais alfa (rgba), gradientes lineares e diretivas de compilação condicional (@media queries).
 
